@@ -6,7 +6,7 @@ const app = express();
 // Connect DB
 connectDB();
 
-// init middleware
+// init middleware; by doing this, we can accept body data
 app.use(express.json({ extended: false }));
 
 app.get("/", (req, res) => res.json({ msg: "Welcome to Contact Manager API" }));
