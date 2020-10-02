@@ -18,34 +18,34 @@ const ContactState = (props) => {
       {
         id: 1,
         name: "first contact",
-        email: "first@gmail.com"
+        email: "first@gmail.com",
         phone: "111-111-1111",
-        type: "personal"
+        type: "personal",
       },
       {
         id: 2,
         name: "second contact",
-        email: "second@gmail.com"
+        email: "second@gmail.com",
         phone: "222-222-2222",
-        type: "personal"
+        type: "professional",
       },
       {
         id: 3,
         name: "third contact",
-        email: "third@gmail.com"
+        email: "third@gmail.com",
         phone: "333-333-3333",
-        type: "personal"
+        type: "personal",
       },
     ],
   };
 
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(contactReducer, initialState);
 
   // Add Contact
 
   // Delete Contact
 
-  // Set Current Contact 
+  // Set Current Contact
 
   // Clear Current Contact
 
@@ -56,12 +56,14 @@ const ContactState = (props) => {
   // Clear Filter
 
   return (
-    <ContactContext.Provider value={{ 
-      contacts: state.contacts
-    }}>
-      { props.children }
+    <ContactContext.Provider
+      value={{
+        contacts: state.contacts,
+      }}
+    >
+      {props.children}
     </ContactContext.Provider>
-  )
+  );
 };
 
-export default ContactState
+export default ContactState;
