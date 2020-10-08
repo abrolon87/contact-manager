@@ -85,6 +85,7 @@ const AuthState = (props) => {
       });
     }
   };
+
   // logout
   const logout = () => console.log("logout");
   // clear errors
