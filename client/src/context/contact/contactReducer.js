@@ -43,6 +43,7 @@ export default (state, action) => {
         ),
         loading: false,
       };
+
     case CLEAR_CONTACTS:
       return {
         ...state,
