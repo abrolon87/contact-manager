@@ -54,21 +54,21 @@ const ContactForm = () => {
         type="text"
         placeholder="Name"
         name="name"
-        //value={name}
+        value={name}      
         onChange={onChange}
       />
       <input
         type="email"
         placeholder="Email"
         name="email"
-        //value={email}
+        value={email}
         onChange={onChange}
       />
       <input
         type="text"
         placeholder="Phone"
         name="phone"
-        // value={phone}
+        value={phone}  
         onChange={onChange}
       />
       <h5>Contact Type</h5>
@@ -78,15 +78,15 @@ const ContactForm = () => {
         value="personal"
         checked={type === "personal"}
         onChange={onChange}
-      />
-      Personal{" "}
+      />{' '}
+      Personal{' '}
       <input
         type="radio"
         name="type"
         value="professional"
         checked={type === "professional"}
         onChange={onChange}
-      />{" "}
+      />{' '}
       Professional
       <div>
         <input
