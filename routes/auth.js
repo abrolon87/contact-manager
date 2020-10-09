@@ -1,12 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const { genSalt } = require("bcryptjs");
+
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const auth = require("../middleware/auth");
 const { check, validationResult } = require("express-validator");
-const { json, response } = require("express");
 
 const User = require("../models/User");
 
