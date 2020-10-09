@@ -26,7 +26,8 @@ const App = () => {
       <ContactState>
         <AlertState>
           <Router>
-            <Fragment className="App">
+            <Fragment>
+              <div className="App">
               <Navbar />
               <div className="container">
                 <Alerts />
@@ -36,7 +37,8 @@ const App = () => {
                   <Route exact path="/register" component={Register} />
                   <Route exact path="/login" component={Login} />
                 </Switch>
-              </div>
+               </div>
+               </div>
             </Fragment>
           </Router>
         </AlertState>
